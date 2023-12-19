@@ -1,0 +1,12 @@
+sector#1:ask
+sector#2:ask
+sector#3:ask
+sector#4:ask
+sector#5:ask
+sector#6:ask
+sector#7:ask
+sector#8:ask
+sector#9:ask
+sector#10:ask
+sector#11:ask
+sector#12:ask
