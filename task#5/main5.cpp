@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-<<<<<<< HEAD
 // std::string return_string(int *spin, std::string path)
 // {
 //     std::string str;
@@ -34,51 +33,20 @@
 //     file.close();
 //     return str;
 // }
-=======
->>>>>>> 18f2225deb56b1ca130d9887686132914c7ad27a
+
 std::string return_string(int *spin, std::string path)
 {
     std::string str;
     std::ifstream file;
-    file.open(path, std::ios::binary);
+    file.open(path);
+    for(int i=0;i<=*spin;i++)
     {
-        int start_sector(0);
-<<<<<<< HEAD
-        
-        
-=======
-        for (int i = 0; i < *spin;)
-        {
-            char buffer;
-            start_sector++;
-            file.read((char *)&buffer, sizeof(buffer));
-            if (buffer == '\n')
-            {
-                i++;
-            }
-        }
->>>>>>> 18f2225deb56b1ca130d9887686132914c7ad27a
-
-        char buffer = '0';
-        file.seekg(start_sector);
-        while (true)
-        {
-            // char buffer;
-            file.read((char *)&buffer, sizeof(buffer));
-            if (buffer == '\r' || buffer == '\n' || file.eof())
-                break;
-            else
-                str += buffer;
-        }
+        getline(file, str);
     }
     file.close();
     return str;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 18f2225deb56b1ca130d9887686132914c7ad27a
-bool play(bool sector[],int& spiner)
+bool play(bool sector[], int &spiner)
 {
     int spin(0);
     std::cout << "Player enter spin: ";
@@ -108,7 +76,6 @@ bool play(bool sector[],int& spiner)
         return false;
     }
 }
-
 int main()
 {
     int tv_viewers(0), player(0), spiner(0);
