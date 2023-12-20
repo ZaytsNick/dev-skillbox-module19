@@ -1,39 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-// std::string return_string(int *spin, std::string path)
-// {
-//     std::string str;
-//     std::ifstream file;
-//     file.open(path, std::ios::binary);
-//     {
-//         int start_sector(0);
-//         for (int i = 0; i < *spin;)
-//         {
-//             char buffer;
-//             start_sector++;
-//             file.read((char *)&buffer, sizeof(buffer));
-//             if (buffer == '\n')
-//             {
-//                 i++;
-//             }
-//         }
-//         char buffer = '0';
-//         file.seekg(start_sector);
-//         while (true)
-//         {
-//             // char buffer;
-//             file.read((char *)&buffer, sizeof(buffer));
-//             if (buffer == '\r' || buffer == '\n' || file.eof())
-//                 break;
-//             else
-//                 str += buffer;
-//         }
-//     }
-//     file.close();
-//     return str;
-// }
-
 std::string return_string(int *spin, std::string path)
 {
     std::string str;
