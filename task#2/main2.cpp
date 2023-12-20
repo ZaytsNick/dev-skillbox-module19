@@ -13,15 +13,9 @@ int main()
     {
         while (!file.eof())
         {
-<<<<<<< HEAD
             char buffer[1000];  
             file.read(buffer,sizeof(buffer)-1);
             buffer[file.gcount()]=0;
-=======
-            char buffer;
-            file.read((char*)&buffer,sizeof(buffer));
-            if(file.gcount())
->>>>>>> 18f2225deb56b1ca130d9887686132914c7ad27a
             std::cout<<buffer;
         }
     }
